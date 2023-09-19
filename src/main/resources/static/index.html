@@ -1,28 +1,75 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
+
 <html>
     <head>
         <title>TechShop</title>
         <meta charset="UTF-8">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <a href="ejemplo8.html">Atras</a>|
-        <a href="index.html">Home</a>|
-        <a href="ejemplo2.html">Next</a><hr>
-        <h1 style="text-align: center; background-color: black; color: white"> Index</h1>
+        <header>
+            <a href="index.html"><h1>TecShop</h1></a>
+        <nav>
+        <a href="ejemplo8.html">&triangleleft;</a>|
+        <a href="ejemplo2.html">&triangleright;</a>
+        <a href="ejemplo2.html">Home</a>
+        <a href="ejemplo2.html">Ventas</a>
+        <a href="ejemplo2.html">Ubicanos</a>
+        </nav>
+       
+         </header>
+        <aside>
+            <h1 id="titulo"> TecShop</h1>
+        <br/>
+        <p>El mes anterior el XY-201 fue el producto mas vendido, esta semana esta con un 30% de descuento</p>
+        </aside>
+        <section>
+            <h2>Nuestros productos</h2>
+            <article class="producto">
+                <h3>XY-201</h3> 
+                <figure>
+                    <img src="https://hlassets.paessler.com/common/files/graphics/illustration/server-14-one-forth.png" width="200" alt="">
+                    <figcaption>¢2 000 000<a href="#">Comprar</a></figcaption>
+                </figure>
+                <p style="text-align: center">Lorem ipsum dolor sit amet consectetur adipiscing elit, tempor sociis sed ornare cum enim in nisl, torquent libero rhoncus lacinia nullam justo. 
+                Penatibus parturient litora interdum vestibulum mollis sed tempus, platea suspendisse magnis sagittis lectus tristique cum himenaeos, 
+                in venenatis mauris massa dignissim tempor. Nisl habitasse nostra platea facilisis at ridiculus vulputate cum neque mus nec, 
+                nam sociosqu fermentum faucibus libero torquent tellus rutrum cubilia auctor, enim vivamus nunc turpis ornare ac mollis senectus ultrices curae.</p>    
+            </article>
+            
+            <article class="producto">
+                <h3>DP-405</h3>
+                <figure>
+                    <img src="data:image/png;base64,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" alt="">  
+                </figure>
+                <p style="text-align: end">Pulvinar molestie nulla libero dis vel sed, elementum rutrum aenean consequat taciti sem, vitae turpis fusce inceptos sodales. Fringilla mauris phasellus 
+                dui massa per vitae et congue venenatis nam varius cras velit, cursus sociosqu habitasse est accumsan tincidunt ut iaculis hendrerit vivamus tristique.
+                Tellus placerat dictum laoreet luctus odio eu facilisis aliquam, cursus penatibus sollicitudin porta diam duis venenatis nulla risus,
+                facilisi ac platea nam felis quam non.</p>
+            </article>
+            
+            <article class="producto">
+                <h3>IX-129</h3>
+                <figure>
+                    <img src="https://f.fcdn.app/imgs/38140d/www.zonatecno.com.uy/zoteuy/62c1/original/catalogo/102808_102808_1/2000-2000/celular-apple-iphone-14-128gb-6gb-purple-latam-celular-apple-iphone-14-128gb-6gb-purple-latam.jpg" width="200" alt="">  
+                </figure>
+                <p>Sociosqu ultrices nulla imperdiet risus dis lobortis porta metus mollis, facilisi aliquet platea elementum ornare molestie id cras nec, faucibus dictum 
+                mauris semper donec vehicula dui eleifend. Ac urna blandit inceptos curabitur tellus venenatis fusce bibendum habitasse lacus, dapibus metus taciti 
+                tempus potenti primis netus ultrices a, phasellus quam et sed ultricies sociosqu pretium nisl congue.
+                Nulla ut lobortis accumsan mauris nascetur ornare fusce varius vulputate malesuada hendrerit, nullam congue ridiculus porta eleifend et 
+                mattis enim pharetra feugiat. Accumsan viverra diam faucibus magnis lacus curae nullam vestibulum, nam nunc vivamus sociosqu dui integer rutrum,
+                porttitor fringilla aenean habitasse vehicula enim nascetur.</p>
+            </article>
+           
         <p style="text-align: center">Lorem ipsum dolor sit amet consectetur adipiscing elit, tempor sociis sed ornare cum enim in nisl, torquent libero rhoncus lacinia nullam justo. 
         Penatibus parturient litora interdum vestibulum mollis sed tempus, platea suspendisse magnis sagittis lectus tristique cum himenaeos, 
         in venenatis mauris massa dignissim tempor. Nisl habitasse nostra platea facilisis at ridiculus vulputate cum neque mus nec, 
         nam sociosqu fermentum faucibus libero torquent tellus rutrum cubilia auctor, enim vivamus nunc turpis ornare ac mollis senectus ultrices curae.</p>
-        
+  
         <p style="text-align: end">Pulvinar molestie nulla libero dis vel sed, elementum rutrum aenean consequat taciti sem, vitae turpis fusce inceptos sodales. Fringilla mauris phasellus 
         dui massa per vitae et congue venenatis nam varius cras velit, cursus sociosqu habitasse est accumsan tincidunt ut iaculis hendrerit vivamus tristique.
         Tellus placerat dictum laoreet luctus odio eu facilisis aliquam, cursus penatibus sollicitudin porta diam duis venenatis nulla risus,
         facilisi ac platea nam felis quam non.</p>
-        
         <p>Sociosqu ultrices nulla imperdiet risus dis lobortis porta metus mollis, facilisi aliquet platea elementum ornare molestie id cras nec, faucibus dictum 
         mauris semper donec vehicula dui eleifend. Ac urna blandit inceptos curabitur tellus venenatis fusce bibendum habitasse lacus, dapibus metus taciti 
         tempus potenti primis netus ultrices a, phasellus quam et sed ultricies sociosqu pretium nisl congue.
@@ -30,6 +77,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         mattis enim pharetra feugiat. Accumsan viverra diam faucibus magnis lacus curae nullam vestibulum, nam nunc vivamus sociosqu dui integer rutrum,
         porttitor fringilla aenean habitasse vehicula enim nascetur.</p>
         
-        
+        </section>
+        <footer>
+            Derechos Reservados TecShop 2023 &COPY;
+        </footer>
     </body>
 </html>
